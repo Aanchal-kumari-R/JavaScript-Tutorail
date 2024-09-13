@@ -1,0 +1,56 @@
+<!-- 
+EVENT DELEGATION:-- 
+EVENT DELEGATION  is a concept in JAVASCRIPT where instead of attaching event listeners to individuals elements, you attach a single 
+e vent listeners to a common ancestor of these elements. This is particularly useful when you have a large number of similar elements 
+and want to reduce the number of event listeners, improve performance, and simplify code.
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style> 
+        p{ 
+         padding-top:220px;
+         padding-left:630px;
+        }  
+        ul {
+            list-style-type: none;
+            padding: 0;
+            border: 1px solid black;
+          }
+          
+          ul li {
+            padding: 8px 16px;
+            border-bottom: 1px solid black; 
+            padding-left:700px;
+          }
+          
+          ul li:last-child {
+            border-bottom: none
+          }
+          
+    </style>
+</head>  
+<body>
+    <p><b>Which programming language you like the most.</b></p> 
+<br/> 
+    <ul id="mylist" class=""> 
+       <li class="list1">JAVASCRIPT</li>
+        <li class="list2">REACT</li>
+        <li class="list3">PYTHON</li>
+        <li class="list4">DJANGO</li>
+    </ul>  
+    <p id="listValue"></p> 
+
+    <script>  
+        const getListDetails = (event) =>{ 
+            console.log(event.target); 
+            document.getElementById("listValue").innerHTML = event.target.textContent;
+        }
+        document.getElementById('mylist').addEventListener("click",getListDetails);
+    </script>
+</body>
+</html>

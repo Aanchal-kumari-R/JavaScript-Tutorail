@@ -1,0 +1,92 @@
+<!--ADVANCED JAVASCRIPT  
+ EVENT PROPGATION:----------- 
+ Event propgation refers to the process of how events propogate or travel through the dom(Document Object model) hierarchy. 
+ In JavaScript, there are three phase of event propagation: compturing phase and bubbling phase.  
+ 1):- CAPTURING PHASE:- 
+ The event start from the root of the DOM and and goes down to the target element. 
+ 2):-TARGET PHASE:- 
+ The event reaches the target element. 
+ 3):- BUBBLING PHASE:- 
+The event start from the target element bubbles up to the root of the DOM. --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style> 
+        #outer{ 
+            height: 350px; 
+            width: 350px; 
+            background-color:pink;  
+            margin-left:550px; 
+            margin-top:170px; 
+
+        }  
+        #middle{ 
+            height: 235px; 
+            width: 235px;  
+            margin: 55px;
+            background-color:blue; 
+        }  
+        #inner{ 
+            height: 135px; 
+            width: 135px;  
+            margin: 45px;
+            background-color:green;
+        } 
+    </style>
+</head>
+<body>
+    <div id="outer"> Outer 
+        <div id="middle"> Middle
+            <div id="inner">Inner</div>
+        </div>
+    </div> 
+
+    <script> 
+        const callOuter = (event) =>{ 
+        console.table([ 
+            { 
+                Decription : "I am the outer one",
+                Target : event.target, 
+                CurrentTarget : event.currentTarget,
+            },
+        ]);
+        };     
+
+        const callmiddle = (event) =>{  
+            console.table([  
+                { 
+                Description : "I am the middle one",     
+                Target : event.target, 
+                CurrentTarget : event.currentTarget, 
+                }
+         ]);
+        }; 
+
+        const callinner = (event) =>{ 
+            console.table([ 
+                { 
+                    Description : "I am the inner one",     
+                    Target : event.target, 
+                    CurrentTarget : event.currentTarget,        
+                }
+            ]); 
+           // event.stopPropagation();
+        };
+
+
+       // document.getElementById("outer").addEventListener("click",callOuter); 
+       // document.getElementById("middle").addEventListener("click",callmiddle); 
+       // document.getElementById("inner").addEventListener("click",callinner);  
+
+        document.getElementById("outer").addEventListener("click",callOuter,true); 
+        document.getElementById("middle").addEventListener("click",callmiddle,true); 
+        document.getElementById("inner").addEventListener("click",callinner,true); 
+
+    </script>
+</body>
+</html>
+ 

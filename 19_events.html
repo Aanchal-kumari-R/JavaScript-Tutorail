@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Events </title>  
+    <style> 
+      h1{ 
+        margin-bottom: 2.4rem;
+      }
+    </style>
+</head>
+<body>  
+    <h1>Inline Events</h1> 
+    <button onclick="alert('Welcome')">Greeting</button> 
+    <button ondblclick="alert('Welcome')">Greeting Again</button>
+    <button onmouseover="alert('Welcome again')">Greeting Again</button>
+
+    <h1>Dom Event handler</h1> 
+    <button id = 'myBtn'>Greeting</button>
+    <button id = myBtn1>Greeting Again</button> 
+
+    <h1>AddEventListner Event  handler</h1> 
+    <button id = 'myBtn2'>Greeting</button>
+    <button id = 'myBtn3'>Greeting Again</button>
+
+    <script> 
+    document.getElementById("myBtn").onclick = function (){ 
+        alert("Welcome to the world.");
+    }    
+    
+    document.getElementById('myBtn1').onmouseover = function (){ 
+        alert("Welcome to the world.");
+    }    
+
+    document.getElementById('myBtn2').addEventListener('click',function (){ 
+        alert("Welcome here");    
+     }); 
+
+    document.getElementById('myBtn2').addEventListener('click', () =>{ 
+        alert("Welcome here again");
+    }); 
+
+    document.getElementById('myBtn3').addEventListener('mouseover',function (){ 
+        alert("Welcome again and again");
+    });
+    
+    </script>
+</body>
+</html>

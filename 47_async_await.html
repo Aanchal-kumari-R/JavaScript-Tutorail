@@ -1,0 +1,77 @@
+<!--Async ans await function:- 
+async and await are javaScript keywords introduced in ECMAScript 2007 (ES8) that make asynchronous code look and behave more like 
+synchronous code , making it easier to write read and reason about asynchronous operations.  
+
+Async function Declaration:- The async keyword is used to declare an asynchronous function. An asynchronous function returns a 
+promise implicitly, even if the return value is not explicitly wrapped in a promise. Inside an asynchronous function , you can 
+use the await keyword to pause the execution of code until a promise is resolved or rejected. 
+
+Await Operator:- The await keyword is used to pause the execution of an async function untill a Promise is settled(resolve and rejected) 
+It can only be used inside on async function  --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>  
+        body{ 
+            background-color:black;
+        }
+        .container{ 
+            border:2px solid black; 
+            width: 22%;
+            margin-top:290px; 
+            margin-left:580px; 
+            padding-top:-5px;
+            padding-right:10px;
+            padding-left:33px;
+            padding-bottom:10px; 
+            border-radius: 8px;   
+            background-color:white;
+            
+        } 
+        button{  
+            padding:15px;  
+            border: none;
+            border-radius: 8px; 
+            background-color:#4CAF50; 
+            font-size:16px; 
+            margin-left:80px;
+        }  
+    </style>
+</head>
+<body> 
+    <div class="container"> 
+        <h1>Welcome to Dad Jokes!</h1> 
+        <section class = "api_body"></section> 
+        <button id = "fetchjoke">Get Another Joke</button>
+    </div> 
+
+    <script>  
+        const apiBody = document.querySelector(".api_body");
+        const apiUrl = "https://icanhazdadjoke.com/";     
+
+        async function fetchData() { 
+            const res = await fetch(apiUrl, {
+            headers:{ 
+                Accept: "application/Json",  
+            },
+        })  
+        const data = await res.json(); 
+        console.log(data); 
+        apiBody.innerHTML = data.joke;
+        }
+      
+
+        fetchData(); 
+
+        document.getElementById("fetchjoke").addEventListener("click",fetchData);
+
+
+    </script>
+    
+</body>
+</html>
