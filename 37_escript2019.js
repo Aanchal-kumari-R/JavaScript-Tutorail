@@ -45,7 +45,7 @@
 //console.log("       thapa       ".trimEnd());  
 
 // Symbol.prototype.description():------------- 
-// In JavaScript , a Symbol is a primitive data type introduced in ECMAScript 2015 (Es6). it represend a unique identifie 
+// In JavaScript , a Symbol is a primitive data type introduced in ECMAScript 2015 (Es6). it represend a unique identifier
 // that is immutable and guarentee to be unique. Symbol are often used as property keys in objects to avoid naming conflict. 
 
 // const mySymbol = Symbol("This is my symbol.") 

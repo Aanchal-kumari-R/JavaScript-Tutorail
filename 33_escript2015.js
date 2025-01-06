@@ -1,11 +1,50 @@
-// const name  = "aanchal." 
-// const age = 23; 
+// DEFAULT PARAMETER
+// In EcmaScript 6 (ES6) :- default parameter introduced, providing a more concise way to handle function parameter defaults. Default 
+// parameter allows us to specify default value for function parameter in the function declaration itself. If a parameter is not  
+//  not provided when the function is called , the default value id used. 
 
-// traditional way in dictionary
-// const obj = {name:name,age:age} 
-// using shorthand notation for object properties
-// const myobj={name,age};  
-// console.log(myobj);  
+//  Default function parameters allow named parameter to be initialized with default values if no value or undefined is passed. 
+
+// function sum(a = 20 , b = 10){ 
+//     return(a+b);
+// } 
+// console.log(sum());
+// console.log(sum(10,10));
+// console.log(sum(10));  
+ 
+// Traditional Function
+// const sum1 = function (a,b){ 
+//     let result = `The sum of ${a} and ${b} is ${a+b}.`; 
+//     console.log(result)
+// }; 
+// sum1(19,39); 
+// FAT ARROW Functions : In EcmaScript 6 (ES6) , arrow function also known as fat arrow functions , were introduced as a concise way 
+// to write anonymous functions. 
+
+// const sum2 = (a,b) =>{ 
+//     let result = `The sum of ${a} and ${b} is ${a+b}.`; 
+//     console.log(result);
+// }; 
+// sum2(20,30); 
+
+// const sum3 = (a,b) =>console.log(`The sum of ${a} and ${b} is ${a+b}.`); 
+// sum3(20,30);   
+
+// let square = a => `The square of ${a} is ${a*a}.`; 
+// console.log(square(4));   
+
+
+// Object Properties:- Modern JavaScript
+// const name="Aanchal"; 
+// const age = 30 
+// traditional way in dictionary 
+// let obj = {name:name,oge:age}; 
+// console.log(obj);
+
+// using shorthand notation for object properties if object key and value name is same.
+// let myobj = {name,age}; 
+// console.log(myobj);
+
 
 // DESTRUCTURING :- Destructuring is a javaScript expression that makes it possible to unpacks values from arrays, or properties 
 // from objects ,into distinct variables. That is , we can extract data from array and object and assign them to variables. 
@@ -21,6 +60,7 @@
 // const [, , third] = numbers; 
 // console.log(third);  
  
+
 // INTERVIEW QUESTION:- Swap two numbers without using third variable  
 
 // let a = 10; 
@@ -28,6 +68,7 @@
  
 // [a,b] = [b,a]; 
 // console.log(a,b);   
+
 
 // DESTRUCTURING OBJECT:-  
 //  const user = {name:"Aanchal",age:30}; 
@@ -40,9 +81,11 @@
 // console.log(name); 
 // console.log(age);  
 
+
 // RENAMING PROPERTIES 
 // const {name:myname,age} = user; 
 // console.log(age,myname);
+
 
 // SPREAD OPERATOR - Modern JavaScript 
 // javaScript ES6  introduce the spread operator. The syntax is (...) three dots followed by the array.(or literals.) 
@@ -73,6 +116,7 @@
 // console.log(country.split(""));
 // using spread operator 
 // console.log([...country]);  
+
 
 // REST PARAMETER :- 
 // The rest paramenter syntax allow a function to accept an indefinite number of argument as an array providing a more flexible 

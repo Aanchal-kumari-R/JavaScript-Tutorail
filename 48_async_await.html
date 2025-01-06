@@ -22,16 +22,18 @@ It can only be used inside on async function  -->
         }
         .container{ 
             border:2px solid black; 
-            width: 22%;
+            width: 32%;
             margin-top:290px; 
-            margin-left:580px; 
+            margin-left:540px; 
             padding-top:-5px;
             padding-right:10px;
             padding-left:33px;
             padding-bottom:10px; 
             border-radius: 8px;   
             background-color:white;
-            
+        }  
+        h1{ 
+            margin-left:5rem;
         } 
         button{  
             padding:15px;  
@@ -39,7 +41,7 @@ It can only be used inside on async function  -->
             border-radius: 8px; 
             background-color:#4CAF50; 
             font-size:16px; 
-            margin-left:80px;
+            margin-left:10rem;
         }  
     </style>
 </head>
@@ -58,10 +60,10 @@ It can only be used inside on async function  -->
             const res = await fetch(apiUrl, {
             headers:{ 
                 Accept: "application/Json",  
-            },
+            }
         })  
         const data = await res.json(); 
-        console.log(data); 
+        console.log(data.joke); 
         apiBody.innerHTML = data.joke;
         }
       

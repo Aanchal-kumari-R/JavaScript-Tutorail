@@ -1,3 +1,12 @@
+<!--Window Object :- The window object represent the global window in a browser.Both the Browser object model (BOM)  
+    and the document object model (DOM) are part of the window object. -->
+
+<!--The Bom represent the browser as an object and provides methods and properties for interacting with the browser 
+itself (not directly releted to the content of a web page.)  
+
+Example of Bom features include window.navigator for browser information , window.location for URL manipulation ,  
+window.alert for displaying alerts.-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +14,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head> 
-<style> 
+<style>  
+    body{ 
+         background-color: black; 
+         text : white
+    } 
+    h1{ 
+        color:white;
+    } 
+
+    button{ 
+        border-radius: 50px; 
+        height: 35px;  
+        background-color:rgb(245, 212, 66);  
+        margin:7px;  
+        font-size: 18px; 
+        font-weight:550;
+    }
 
 </style>
-<body>   
+<body>    
+
+    <h1>Javascript History Object</h1> 
+    <button onclick ="window.open('https://www.w3schools.com/css/')">Navigate</button>
         
     <h1>Javascript History Object</h1> 
     <button onclick="history.back()">Go Back</button> 
@@ -31,11 +59,6 @@ screen.colorDepth
 24
 screen.height
 1304     -->
-
-
-
-
-
 
     <script> 
     alert("Welcome to the js course.")

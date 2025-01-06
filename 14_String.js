@@ -1,4 +1,4 @@
-// trim() method :-
+// trim() method :-Remove whitespace from both ends of the string.
 str = " Hello World!  "; 
 console.log(str.length); 
 let trim_result = str.trim(); 

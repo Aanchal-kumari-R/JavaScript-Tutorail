@@ -21,7 +21,7 @@ const dateFromString = new Date(dateString);
 
 // new Date(year,month,day,hours): - Create a date object with the specified date , month , day and hours.   
 // const date3 = new Date(2024,1,5,10);  
-// console.log(date2);  
+// console.log(date3);  
 
 // new Date(year,month,day,hours,minutes): - Create a date object with the specified date , month , day , hours and minutes. 
 // const date4 = new Date(2024,4,12,5,12); 
@@ -34,7 +34,7 @@ const dateFromString = new Date(dateString);
 // console.log(date5);    
 
 // new Date(year,month,day,hours,minutes,seconds,millisecond): - Create a date object with the specified date , month , day  
-// , hours , minutes  ,seconds and milliseconds.  
+// , hours , minutes  ,seconds and millisecond.  
 
 // const date6= new Date(2024,4,12,5,12,10,274); 
 // console.log(date6);    

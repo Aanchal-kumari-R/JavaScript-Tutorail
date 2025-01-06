@@ -1,9 +1,17 @@
+// FUNCTION IN JAVASCRIPT 
+//A function is a block of reusable code that perform a specific task.Functions are used to organize code into modular and  
+// manageble pieces, promote code reuse, and make code are more readable. 
+
 function add(a , b){ 
     return a+b;
 } 
 console.log(add(5,1))
 console.log(add(5,5))
 console.log(add(5,51))  
+
+// FUNCTION DECLARATION 
+//Declare a function using the function keyword, followed by the function name, parameters(if any required), and the function body.
+//This step defines the function and specified what code should be executed when the function is called.
 
 function sum(){ 
     a = 5; 
@@ -12,7 +20,9 @@ function sum(){
 }  
 sum();
 sum();  
-
+// FUNCTION INVOCATION(CALLING A FUNCTION) 
+// After declaring a function , you can invoke or call it by using its name followed by paranthesis. 
+// if the function has parameters, provide values (arguments) for those parameter inside the paranthesis. 
 // Question solved 
 
 function greet(name){ 
@@ -24,14 +34,16 @@ greet("Shyam")
 greet("Janki") 
 greet("Radha")   
 
-// Function expression 
+// Function expression :- A function expression is a way to degine a function as part of an expression. It can 
+// be either named or anonymous. If it's name , it become a named function experession. 
 
 var result = function add(a,b){ 
     console.log(a+b);
 }; 
 result(23,43); 
 
-// Anonymous function 
+// Anonymous function :- An anonymous function is a function withour a name. It can be created using a function 
+// declaration and function expression without a specified name.
 
 var result = function (a , b){ 
     console.log(a-b);
@@ -39,7 +51,9 @@ var result = function (a , b){
 
 result(23,21)    
 
-// Immediately involked function expression 
+// Immediately involked function expression (IIfE) :- An IIFE is a javaScript function that is defined and execute  
+// immediately after it's creation. It is a way to create a self-contained block of code that does not interfere with  
+// the surrounding code and execute immediately. 
 
 let result1 = (function(a,b){ 
     console.log(a+b); 
@@ -47,35 +61,8 @@ let result1 = (function(a,b){
 })(0,0)
 
 
-// Default Arguments 
-
-function sum(a = 20 , b = 10){ 
-    return(a+b);
-} 
-console.log(sum());
-console.log(sum(10,10));
-console.log(sum(10));  
 
 
-// Traditional function
-const sum1 = function (a,b){ 
-    let result = `The sum of ${a} and ${b} is ${a+b}.`; 
-    console.log(result)
-}; 
-sum1(19,39); 
-
-// Arrow function
-const sum2 = (a,b) =>{ 
-    let result = `The sum of ${a} and ${b} is ${a+b}.`; 
-    console.log(result);
-}; 
-sum2(20,30); 
-
-const sum3 = (a,b) =>console.log(`The sum of ${a} and ${b} is ${a+b}.`); 
-sum3(20,30);   
-
-let square = a => `The square of ${a} is ${a*a}.`; 
-console.log(square(4));  
 
 // Question solved of calculator  
 

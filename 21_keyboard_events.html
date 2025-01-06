@@ -5,11 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
     <style> 
+        body{ 
+            background-color:black; 
+        }  
+        .contain{  
+            padding-top:150px; 
+            padding-left:600px;
+
+        }
+
+        #myInput{ 
+            padding:12px; 
+            border-radius:8px; 
+            font-size:18px; 
+            width:305px;
+        }
+         
+        .output{ 
+            color:white; 
+            font-size:18px; 
+            border-left:2px solid white;  
+            background-color:rgb(60,60,60); 
+            border-width:3px; 
+            padding:15px; 
+            margin-top:10px;
+            margin-right:650px; 
+            border-radius:5px;
+            
+        } 
+        p{ 
+            padding: 5px;
+        }
     
     </style>
 </head>
 <body> 
-    <div> 
+    <div class = "contain"> 
         <input type="text" id = 'myInput' placeholder="Type Something......."> 
         <div class="output">
             <p class="keyPressed">Key Pressed:4</p> 
@@ -18,11 +49,8 @@
             <p class="eventType">Event type:</p> 
 
         </div>
-    </div>  
-
-
+    </div>   
     <script>  
-
         const handleKeyPress = (event) =>{ 
             console.log(event); 
             console.log('Key Pressed:',event.key); 
@@ -42,8 +70,6 @@
             `key Type: ${event.type}`; 
    
         };  
-
-    
         var myInput = document.getElementById("myInput"); 
        // myInput.addEventListener('keydown',handleKeyPress); 
         myInput.addEventListener('keyup',handleKeyPress);

@@ -30,7 +30,7 @@ const tosorted = name.toSorted();
 console.log(tosorted);
 
 // Array.prototype.toSpliced(start,deleteCount,....items)
-const splicedArr = name.toSpliced(1,1,"ThapaTechnical"); 
+const splicedArr = name.toSpliced(2,1,"Bhardwaj"); 
 console.log(splicedArr); 
 
 // Array.prototype.with(index,value) 

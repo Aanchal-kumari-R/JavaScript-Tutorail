@@ -1,8 +1,8 @@
 // PROMISE  
 // A promise is like a placeholder for the result of an asynchronous operations.
-// A promise in JavaScript is an object that represents the eventual copletion or failure of an asynchronous operation. It allows 
-// you tu handle aynchronous operations more easily and cleanly by providing a way to write asynchronous code that looks  
-// asynchronous.   
+// A promise in JavaScript is an object that represents the eventual completion or failure of an asynchronous operation.  
+// It allows us to handle aynchronous operations more easily and cleanly by providing a way to write asynchronous  
+// code that looks asynchronous.   
 
 // It can be one of three states.
 
@@ -25,22 +25,43 @@
 // setTimeout(()=>{ 
 //     resolve("I miss you.");
 // },2000);
-// }); 
+// });
 
 // pr.then((res)=>{ 
 // console.log(res);
-// }); 
-
-// pr.catch((error)=>{ 
+// }).catch((error)=>{ 
 //     console.log(error);
-// }); 
-
-// pr.finally(()=>{ 
+// }).finally(()=>{ 
 // console.log("I also miss you.")
-// }); 
+// });  
+
+// const name = "Vinod";
+
+// const enrollStudent = (name) =>{ 
+//     return new Promise((resolve,reject)=>{ 
+//      setTimeout(()=>{ 
+//       const isSuccessful = Math.random() > 0.4; 
+
+//       if(isSuccessful){ 
+//         resolve(`Enroll successfull for ${name}`);
+//       }  
+//       else{ 
+//         reject(`Enroll not successful.`);
+//       }
+//      },2000);
+//     });
+// ;}
+// enrollStudent(name).then((res)=>{ 
+//     console.log(res);
+// }).catch((error)=>{ 
+//     console.log(error);
+// }).finally(()=>{ 
+//     console.log("process complete.");
+// });
 
 // Promise Methods:- 
-// Promise.all method is used when you want to wait for all promises to complete succcessfully. Reject state will throw an error. 
+// Promise.all method is used when we want to wait for all promises to complete succcessfully.  
+// Reject state will throw an error. 
 
 const promise1 = new Promise((resolve,reject) => 
     setTimeout(()=>resolve("first"),2000));
@@ -60,8 +81,8 @@ setTimeout(()=>resolve('third'),1000));
 //   })
 
 // Promise.allSettled():- 
-// promise.allSettled method is used when you want to wait for all promisses to complete successfully . Reject state will throw  
-// an error.
+// promise.allSettled method is used when you want to wait for all promises to complete, regardless of success 
+// or failure, and get information about their outcomes. 
 
 //   Promise.allSettled([promise1,promise2,promise3]) 
 //   .then((values)=>{ 
@@ -72,8 +93,8 @@ setTimeout(()=>resolve('third'),1000));
 //   })
 
 // Promise.race():- 
-// Promise.race is used when you are interested in the result of the first promise that completes ,regardless of success or 
-// failure. 
+// Promise.race is used when we are interested in the result of the first promise that completes, 
+// regardless of success or failure. 
  
 Promise.race([promise1,promise2,promise3]) 
 .then((values)=>{ 

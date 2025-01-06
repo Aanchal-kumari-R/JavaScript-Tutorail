@@ -1,3 +1,8 @@
+// Value :- A value is a peace of information that a programm can work with. It can be a number, text and true/false. 
+
+// Variable :- A variable is a container that holds a data. It has a name that can be used to store and manipulate the data in a 
+// programm.
+
 console.log("Hello World!")  
 
 let my_firstName = "Aanchal"; 

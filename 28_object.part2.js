@@ -27,7 +27,13 @@
 // ("use strict"); 
 
 // x = 5 
-// console.log(x);
+// console.log(x); 
+
+ // callme(); 
+// function callme(){ 
+    //     console.log(this);
+    // } 
+      
 
 
 // In an object method, this refers to the object. 

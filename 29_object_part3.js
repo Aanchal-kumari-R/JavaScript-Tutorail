@@ -18,12 +18,10 @@
 //         history:88
 //     },
 // }  
-
 // const addSubjectGrade = (student,subject,marks) =>{ 
 //   if(!student.grades){ 
 //     student.grades = {}
 //   } 
-
 //   return student.grades[subject] = marks;
 // }
 // addSubjectGrade(student,"Computer",92); 
@@ -32,10 +30,8 @@
 // write a function that compares two objects to determine if they have the same properties and values.  
 
 // const areObjectEqual = (objA,objB)=>{  
-
 //   const o1 = Object.keys(objA); 
 //   const o2 = Object.keys(objB); 
-
 //   if(o1.length != o2.length){ 
 //     console.log('length is not same');
 //     return false;
@@ -47,26 +43,21 @@
 //       return false;
 //     };
 //   }; 
-
 //   return true;
 // }
 // let objA = {name:"Alice" ,age : 26, city :"NewYork"};
 // let objB = {name:"Alice", age:26, city:"NewYork"};
 // let objC = {name:"Bob", age:30, city:"San Francisco"};
- 
-
 // console.log(areObjectEqual(objA,objB)); 
 // console.log(areObjectEqual(objA,objC));   
 
 // write a function that transform an array of an object into an object where the keys are the object's ids. 
-
 let inputArray = [
   { id:1 , name:"Alice"}, 
   {id:2 , name:"Bob"}, 
   {id:3 , name:"Charlie"}, 
 
 ];     
- 
 const arrayToObj = (arr) =>{ 
   let obj = {}  
   for(let key of arr){ 
@@ -74,10 +65,7 @@ const arrayToObj = (arr) =>{
     obj[key.id] = key; 
     
   }  
-
   return obj;
-
 }
-
 console.log(arrayToObj(inputArray));
 

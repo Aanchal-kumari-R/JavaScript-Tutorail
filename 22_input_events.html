@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
-    <style> 
+    <style>    
+        body{ 
+            background-color:black;
+        } 
+        #contain{ 
+            padding-top:150px; 
+            padding-left:600px;
+        }
+        #myInput{
+        padding:12px; 
+        border-radius:8px; 
+        font-size:18px; 
+        width:305px; 
+        } 
+        .output{ 
+            color:white; 
+            font-size:18px; 
+            border-left:2px solid white;  
+            background-color:rgb(60,60,60); 
+            border-width:3px; 
+            padding:15px; 
+            margin-top:10px;
+            margin-right:650px;  
+            border-radius:5px;
+        } 
+        p{ 
+            padding: 5px;
+        }
     
     </style>
 </head>
 <body>  
 
-    <section> 
-        <input    
-        type = 'text' 
-        id = 'myInput' 
-        name = 'username' 
-        placeholder = 'Type Something.......' 
-        autocomplete = 'off'
-        /> 
+    <section id = contain> 
+        <input type = 'text' id = 'myInput' name = 'username' placeholder = 'Type Something.......' autocomplete = 'off'/> 
 
         <div class = 'output'> 
             <p class = 'inputValue'>Input Value :</p> 

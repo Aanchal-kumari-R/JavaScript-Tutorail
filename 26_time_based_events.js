@@ -13,7 +13,7 @@
 // } 
 // setInterval(repeatedFunction,1000); 
 
-// clearTimeout():- if you want to canceled a account timeout before it occurs, you can use the clearTimeout function.  
+// clearTimeout():- if you want to cancelled a account timeout before it occurs, you can use the clearTimeout function.  
 // the global clearTimeout method canceled a timeout previously established by calling setTimeout().  
 // Syntax :- cleartimeOut(timeoutId) 
 
@@ -24,7 +24,7 @@
 // const work = setTimeout(delayFunction,2000); 
 // clearTimeout(work);  
 
-// clearIntervak():- if you want to cancel a scheduled interval before it ocuurs, you can use the clearInterval Function. 
+// clearInterval():- if you want to cancel a scheduled interval before it ocuurs, you can use the clearInterval Function. 
 // The global clearInterval() method cancle a  timeout previously extablished by calling setInterval.  
 
 // syntax:- clearInterval(intervalId);    

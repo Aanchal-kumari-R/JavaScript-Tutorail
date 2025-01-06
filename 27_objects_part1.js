@@ -19,15 +19,17 @@
 // console.log(person["age"]);
 // console.log(person[`is'Student`]); 
 // console.log(person["is'Student"]); 
+// person.greet();
+
 
 // ADDING AND MODIFYING PROPERTIES:- you can add new properties or modifying existing ones: 
 // person.age = 18 
 // person.job = 'Web development'; 
 // console.log(person); 
-// (person["age"])=20 
+// person["age"]=20 
 // console.log(person);  
 
-// METHODS:- Methods in objects are functions associated with the object. They can be invoked using  the same notation as properties: 
+// METHODS:- Methods in objects are functions associated with the object. They can be invoked using the same notation as properties: 
 // person.greet();  
 
 // We can add dynamic keys in an object    
@@ -40,7 +42,7 @@
 //     greet: function(){    
         // console.log(`My ${idType} is ${student[idType]} and name is ${student.sName}.`);
 //     } ,
-// } 
+// }; 
 // student.greet();  
 
 // usecase :- when we want to get the user name and value in react.     

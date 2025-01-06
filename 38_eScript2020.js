@@ -6,7 +6,7 @@
 // promise.allSettled 
 
 // Bigint()------------ 
-// Bigint in javaScript is a data type used to represend and perform operations on large integers that exceed the limits of 
+// Bigint in javaScript is a data type used to represent and perform operations on large integers that exceed the limits of 
 // regular numbers. 
 
 // Creating Bigint  

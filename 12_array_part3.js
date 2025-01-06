@@ -25,7 +25,9 @@ let uniqueValues = number1.filter((curElem,index, arr) =>{
 console.log(uniqueValues);
 console.log([new Set(number1)]);  
 
-// sort and compare in array 
+// sort and compare in array  
+// Sorting in an array :- The sort method sorts the elements of an array in place and returns the 
+// sorted array. By default, it sorts elements as strings.
 const fruits = ["Banana","Apple","Orange","Mango"]; 
 fruits.sort(); 
 console.log(fruits); 
@@ -65,9 +67,9 @@ const names = ["Ram","Shyam","Mohan","Sohan"];
 const prefixName = names.map((curElem)=>`${curElem}`);
 console.log(prefixName); 
 
-// Reduce() 
+// Reduce() :- The reduce method in javascript is used to accumulate or reduce an array to a single value.It iterates over the elements  
+// of an array and applies a callback function to each element , updating an accumulator value with the result.   
 // syntax :- array.reduce(function callback(accumulate, currentValue, index, array){ 
-
 //} , initialeValue); 
 // write a Javascript function that calculates the total price of items in a shopping cart. The function should take an array of  
 // item prices as input and return the total price. 

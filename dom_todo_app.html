@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>  
+</head>  
+<style>  
+    body{ 
+        background-color: black; 
+        text : white
+   }   
+   .container{
+    margin-top:5rem; 
+    margin-left:36rem;
+   }
+   h1{ 
+    color:white; 
+    font-size:45px;
+
+   } 
+   button{ 
+    border-radius: 50px; 
+    height: 45px;  
+    background-color:rgb(245, 212, 66);  
+    margin:7px;  
+    font-size: 20px; 
+    font-weight:550; 
+    width: 115px;
+}  
+input{ 
+    padding: 10px; 
+    width: 18rem; 
+    border-radius:15px; 
+    height:25px; 
+    font-size:22px;
+}
+.todoListsElem{ 
+    color:white;  
+    font-size:22px;
+} 
+</style>
+<body> 
+    <div class="container">
+        <h1>Simple Dom Todo App</h1> 
+        <input type="text" id="inputField"> 
+        <button class= "btn">Click me</button> 
+        <div class = "todoListsElem"></div> 
+    </div>
+
+    <script> 
+        let inputElem = document.getElementById("inputField");  
+        let clickBtn = document.querySelector(".btn");   
+        let todoFirst = document.getElementById('todoFirst');  
+        let todoElem = document.querySelector(".todoListsElem"); 
+
+        const addTodo = () =>{ 
+            console.log(inputField.value);    
+
+          let pElem = document.createElement('p'); 
+          pElem.textContent = inputElem.value; 
+          console.log(pElem); 
+          todoElem.append(pElem); 
+
+          inputElem.value = "";
+
+        }
+        
+        clickBtn.addEventListener("click",()=>{ 
+            addTodo();
+        }); 
+
+        todoElem.addEventListener("click",(event)=>{ 
+            console.log(event.target); 
+
+            let currentElem = event.target; 
+            currentElem.remove();
+        });
+       
+    </script>
+</body>
+</html>

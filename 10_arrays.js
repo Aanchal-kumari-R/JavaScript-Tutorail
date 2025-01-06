@@ -1,3 +1,4 @@
+// Array:- In javaScript , an array is an object that represents a collection of similar type of element.
 let arr = [1,2,3]; 
 console.log(typeof arr); 
 
@@ -25,6 +26,8 @@ fruits[0] = "Mango";
 console.log(fruits);  
 
 // Array Traversal / Iterating Over Arrays 
+// for of loop:- The for of loop is used to iterate over the value of an iterable object , such as array , strings or 
+// other iterable object. 
 
 console.log("for of loop");
 let fruits2 = ["Apple","Banana","Cherry","Mango","Cherry","Guava"]; 
@@ -36,13 +39,15 @@ console.log("for loop");
 for(let item = 0; item<=fruits2.length; item++){ 
     console.log(fruits2[item]);
 } 
-
+// for in loop:-  for in loop is used to iterate over the properties (including indices) of an object.
 console.log("for in loop");
 for(let item in fruits2){ 
     console.log(item);
 }  
 
-// for each loop 
+// for each loop :- The arr.foreach() method calls the provided functions one for each element of the array. 
+// The provided function may perform any kind of operation on the elements of the given array.   
+
 fruits2.forEach((curElem,index,arr)=>{  
 console.log(`${curElem},${index}`); 
 console.log(arr);  
@@ -70,7 +75,7 @@ const myMapArr = fruits2.map((curElem,index,arr)=>{
 });   
 console.log(myMapArr);
     
-//   todo practice  time 
+// todo practice  time 
 // write a programm to multiply each element with 2  
 // foreach loop
  const numbers = [1,2,3,4,5]; 
